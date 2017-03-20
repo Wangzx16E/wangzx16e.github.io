@@ -270,7 +270,7 @@
               
                 
                 <a class="post-title-link" href="/2017/03/20/post2/" itemprop="url">
-                  Unbenannt
+                  MongoDB导入shp并使用Geospatial Index
                 </a>
               
             
@@ -286,7 +286,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-20T10:44:51+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-20T10:35:57+08:00">
                 2017-03-20
               </time>
             
@@ -324,14 +324,11 @@
       
         
           
-            <hr>
-<p>title: shp文件导入mongodb使用geospatial index<br>date: 2017-03-20 10:44:51</p>
-<h2 id="tags-MongoDB"><a href="#tags-MongoDB" class="headerlink" title="tags: MongoDB "></a>tags: MongoDB </h2><p>###shp转为geoJSON储存<br>1.将shp转为geoJSON，使用GDAL的命令行工具<code>ogr2ogr</code>。</p>
+            <h2 id="MongoDB导入shp文件"><a href="#MongoDB导入shp文件" class="headerlink" title="MongoDB导入shp文件"></a>MongoDB导入shp文件</h2><p>1.将shp转为geoJSON，使用GDAL的命令行工具<code>ogr2ogr</code>。</p>
 <pre><code>ogr2ogr -f geoJSON place.json place.shp           
 </code></pre><p>2.删掉开头2行和最后1行，变成jsonArray。<br>3.用<code>mongoimport</code>进行导入。       </p>
-<pre><code>mongoimport --db &lt;db-name&gt; --collection &lt;coll-name&gt; --type json --file place.json
-</code></pre><p>–jsonArray</p>
-<p>###Geospatial Index<br><strong>1.数据如下：</strong><br>库：users<br>collection： place    </p>
+<pre><code>mongoimport --db &lt;db-name&gt; --collection &lt;coll-name&gt; --type json --file place.json--jsonArray
+</code></pre><h2 id="Geospatial-Index"><a href="#Geospatial-Index" class="headerlink" title="Geospatial Index"></a>Geospatial Index</h2><p><strong>1.数据如下：</strong><br>库：users<br>collection： place    </p>
 <p><em>MongoDB compass</em><br><img src="../../images/2-1.jpg" alt="Alt text"><br><img src="../../images/2-2.jpg" alt="Alt text"> </p>
 <p><strong>2.添加Geospatial Index</strong></p>
 <p><em>终端</em>       </p>
@@ -586,7 +583,7 @@ ENCLOSED BY &apos;&quot;&apos; LINES  TERMINATED BY &apos;\n&apos;;
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">Tags</span>
               
             </div>
