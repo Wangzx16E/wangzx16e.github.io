@@ -325,7 +325,7 @@
         
           
             <hr>
-<p>title: shp文件导入MongoDB使用Geospatial Index<br>date: 2017-03-20 10:44:51</p>
+<p>title: shp文件导入mongodb使用geospatial index<br>date: 2017-03-20 10:44:51</p>
 <h2 id="tags-MongoDB"><a href="#tags-MongoDB" class="headerlink" title="tags: MongoDB "></a>tags: MongoDB </h2><p>###shp转为geoJSON储存<br>1.将shp转为geoJSON，使用GDAL的命令行工具<code>ogr2ogr</code>。</p>
 <pre><code>ogr2ogr -f geoJSON place.json place.shp           
 </code></pre><p>2.删掉开头2行和最后1行，变成jsonArray。<br>3.用<code>mongoimport</code>进行导入。       </p>
