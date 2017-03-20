@@ -247,6 +247,151 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://wangzx16e.github.io/2017/03/20/post2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ellen Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ellen's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/20/post2/" itemprop="url">
+                  Unbenannt
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-20T10:44:51+08:00">
+                2017-03-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>title: shp文件导入MongoDB使用Geospatial Index<br>date: 2017-03-20 10:44:51</p>
+<h2 id="tags-MongoDB"><a href="#tags-MongoDB" class="headerlink" title="tags: MongoDB "></a>tags: MongoDB </h2><p>###shp转为geoJSON储存<br>1.将shp转为geoJSON，使用GDAL的命令行工具<code>ogr2ogr</code>。</p>
+<pre><code>ogr2ogr -f geoJSON place.json place.shp           
+</code></pre><p>2.删掉开头2行和最后1行，变成jsonArray。<br>3.用<code>mongoimport</code>进行导入。       </p>
+<pre><code>mongoimport --db &lt;db-name&gt; --collection &lt;coll-name&gt; --type json --file place.json
+</code></pre><p>–jsonArray</p>
+<p>###Geospatial Index<br><strong>1.数据如下：</strong><br>库：users<br>collection： place    </p>
+<p><em>MongoDB compass</em><br><img src="../../images/2-1.jpg" alt="Alt text"><br><img src="../../images/2-2.jpg" alt="Alt text"> </p>
+<p><strong>2.添加Geospatial Index</strong></p>
+<p><em>终端</em>       </p>
+<p>使用<code>createIndex()</code>添加 Geospatial Index</p>
+<pre><code>db.place.createIndex({ geometry: "2dsphere"})</code></pre>     
+
+
+<p><strong>3.使用<code>$geoWithin</code>查询Geospatial Index</strong></p>
+<p><em>终端</em>  </p>
+<pre><code>db.place.find( { geometry: 
+    { $geoWithin:
+     { $geometry: 
+         { type : &quot;Polygon&quot;, 
+           coordinates: [[ [110,20],[115,23],
+                           [115,20], [110,20] ]] 
+           }}}})
+</code></pre><p><em>查询结果:</em><br><img src="../../images/2-3.jpg" alt="Alt text"> </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://wangzx16e.github.io/2017/03/20/post1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -428,7 +573,7 @@ ENCLOSED BY &apos;&quot;&apos; LINES  TERMINATED BY &apos;\n&apos;;
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
@@ -436,6 +581,15 @@ ENCLOSED BY &apos;&quot;&apos; LINES  TERMINATED BY &apos;\n&apos;;
 
           
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">Tags</span>
+              
+            </div>
           
 
         </nav>
