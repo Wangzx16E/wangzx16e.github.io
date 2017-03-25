@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="MongoDB," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -87,29 +87,37 @@
 
 
 
-<meta name="description" content="MongoDB导入shp文件1.将shp转为geoJSON，使用GDAL的命令行工具ogr2ogr。
-ogr2ogr -f geoJSON place.json place.shp           
-2.删掉开头2行和最后1行，变成jsonArray。3.用mongoimport进行导入。       
-mongoimport --db &amp;lt;db-name&amp;gt; --collection">
+<meta name="description" content="自己在用的时候，没有找到针对Github中已有的wrapper使用说明，于是自己简单写了一下。  
+
+在Github选择相应语言的API wrapper，这里我选择的是python版本bear/python-twitter
+
+按照wrapper给的步骤安装包，配置好。  
+
+在Twitter开发者中建立自己的app (有些wrapper里会给出步骤),  获取consumer_key, consu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MongoDB导入shp并使用Geospatial Index">
-<meta property="og:url" content="https://wangzx16e.github.io/2017/03/20/post2/index.html">
+<meta property="og:title" content="使用Twitter API获取数据">
+<meta property="og:url" content="https://wangzx16e.github.io/2017/03/25/post3/index.html">
 <meta property="og:site_name" content="Ellen's blog">
-<meta property="og:description" content="MongoDB导入shp文件1.将shp转为geoJSON，使用GDAL的命令行工具ogr2ogr。
-ogr2ogr -f geoJSON place.json place.shp           
-2.删掉开头2行和最后1行，变成jsonArray。3.用mongoimport进行导入。       
-mongoimport --db &amp;lt;db-name&amp;gt; --collection">
-<meta property="og:image" content="https://wangzx16e.github.io/../../images/2-1.jpg">
-<meta property="og:image" content="https://wangzx16e.github.io/../../images/2-2.jpg">
-<meta property="og:image" content="https://wangzx16e.github.io/../../images/2-3.jpg">
-<meta property="og:updated_time" content="2017-03-20T03:13:18.000Z">
+<meta property="og:description" content="自己在用的时候，没有找到针对Github中已有的wrapper使用说明，于是自己简单写了一下。  
+
+在Github选择相应语言的API wrapper，这里我选择的是python版本bear/python-twitter
+
+按照wrapper给的步骤安装包，配置好。  
+
+在Twitter开发者中建立自己的app (有些wrapper里会给出步骤),  获取consumer_key, consu">
+<meta property="og:image" content="https://wangzx16e.github.io/../../images/3-1.jpg">
+<meta property="og:image" content="https://wangzx16e.github.io/../../images/3-2.jpg">
+<meta property="og:updated_time" content="2017-03-25T03:45:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MongoDB导入shp并使用Geospatial Index">
-<meta name="twitter:description" content="MongoDB导入shp文件1.将shp转为geoJSON，使用GDAL的命令行工具ogr2ogr。
-ogr2ogr -f geoJSON place.json place.shp           
-2.删掉开头2行和最后1行，变成jsonArray。3.用mongoimport进行导入。       
-mongoimport --db &amp;lt;db-name&amp;gt; --collection">
-<meta name="twitter:image" content="https://wangzx16e.github.io/../../images/2-1.jpg">
+<meta name="twitter:title" content="使用Twitter API获取数据">
+<meta name="twitter:description" content="自己在用的时候，没有找到针对Github中已有的wrapper使用说明，于是自己简单写了一下。  
+
+在Github选择相应语言的API wrapper，这里我选择的是python版本bear/python-twitter
+
+按照wrapper给的步骤安装包，配置好。  
+
+在Twitter开发者中建立自己的app (有些wrapper里会给出步骤),  获取consumer_key, consu">
+<meta name="twitter:image" content="https://wangzx16e.github.io/../../images/3-1.jpg">
 
 
 
@@ -137,13 +145,13 @@ mongoimport --db &amp;lt;db-name&amp;gt; --collection">
 
 
 
-  <link rel="canonical" href="https://wangzx16e.github.io/2017/03/20/post2/"/>
+  <link rel="canonical" href="https://wangzx16e.github.io/2017/03/25/post3/"/>
 
 
 
 
 
-  <title> MongoDB导入shp并使用Geospatial Index | Ellen's blog </title>
+  <title> 使用Twitter API获取数据 | Ellen's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -262,7 +270,7 @@ mongoimport --db &amp;lt;db-name&amp;gt; --collection">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://wangzx16e.github.io/2017/03/20/post2/">
+    <link itemprop="mainEntityOfPage" href="https://wangzx16e.github.io/2017/03/25/post3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ellen Wang">
@@ -283,7 +291,7 @@ mongoimport --db &amp;lt;db-name&amp;gt; --collection">
             
             
               
-                MongoDB导入shp并使用Geospatial Index
+                使用Twitter API获取数据
               
             
           </h1>
@@ -298,8 +306,8 @@ mongoimport --db &amp;lt;db-name&amp;gt; --collection">
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-20T10:35:57+08:00">
-                2017-03-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-25T11:41:05+08:00">
+                2017-03-25
               </time>
             
 
@@ -334,28 +342,17 @@ mongoimport --db &amp;lt;db-name&amp;gt; --collection">
       
 
       
-        <h2 id="MongoDB导入shp文件"><a href="#MongoDB导入shp文件" class="headerlink" title="MongoDB导入shp文件"></a>MongoDB导入shp文件</h2><p>1.将shp转为geoJSON，使用GDAL的命令行工具<code>ogr2ogr</code>。</p>
-<pre><code>ogr2ogr -f geoJSON place.json place.shp           
-</code></pre><p>2.删掉开头2行和最后1行，变成jsonArray。<br>3.用<code>mongoimport</code>进行导入。       </p>
-<pre><code>mongoimport --db &lt;db-name&gt; --collection &lt;coll-name&gt; --type json --file place.json--jsonArray
-</code></pre><h2 id="Geospatial-Index"><a href="#Geospatial-Index" class="headerlink" title="Geospatial Index"></a>Geospatial Index</h2><p><strong>1.数据如下：</strong><br>库：users<br>collection： place    </p>
-<p><em>MongoDB compass</em><br><img src="../../images/2-1.jpg" alt="Alt text"><br><img src="../../images/2-2.jpg" alt="Alt text"> </p>
-<p><strong>2.添加Geospatial Index</strong></p>
-<p><em>终端</em>       </p>
-<p>使用<code>createIndex()</code>添加 Geospatial Index</p>
-<pre><code>db.place.createIndex({ geometry: "2dsphere"})</code></pre>     
-
-
-<p><strong>3.使用<code>$geoWithin</code>查询Geospatial Index</strong></p>
-<p><em>终端</em>  </p>
-<pre><code>db.place.find( { geometry: 
-    { $geoWithin:
-     { $geometry: 
-         { type : &quot;Polygon&quot;, 
-           coordinates: [[ [110,20],[115,23],
-                           [115,20], [110,20] ]] 
-           }}}})
-</code></pre><p><em>查询结果:</em><br><img src="../../images/2-3.jpg" alt="Alt text"> </p>
+        <p>自己在用的时候，没有找到针对Github中已有的wrapper使用说明，于是自己简单写了一下。  </p>
+<ol>
+<li><p>在Github选择相应语言的API wrapper，这里我选择的是python版本<a href="https://github.com/bear/python-twitter" target="_blank" rel="external">bear/python-twitter</a></p>
+</li>
+<li><p>按照wrapper给的步骤安装包，配置好。  </p>
+</li>
+<li><p>在Twitter开发者中建立自己的app (有些wrapper里会给出步骤),  获取<br><code>consumer_key</code>, <code>consumer_secret</code> ;           <code>access_token_key</code>, <code>access_token_secret</code>。<br>(后面这2个至少可以用自己的账户获取)</p>
+</li>
+<li>检查自己的VPN设置，比如我用的如下图：<br><img src="../../images/3-1.jpg" alt="Alt text"><br>确保<strong>IP地址</strong>只有一个，不然会报错。<br><img src="../../images/3-2.jpg" alt="Alt text"><br>设置完成后，再运行，即可认证。</li>
+</ol>
+<p>备注：Facebook，Foursquare等在Github上都有wrapper使用API，设置好了VPN就可以使用了：）</p>
 
       
     </div>
@@ -383,12 +380,6 @@ mongoimport --db &amp;lt;db-name&amp;gt; --collection">
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/MongoDB/" rel="tag"># MongoDB</a>
-          
-        </div>
-      
 
       
         
@@ -398,8 +389,8 @@ mongoimport --db &amp;lt;db-name&amp;gt; --collection">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/20/post1/" rel="next" title="关系型数据库(MySQL)数据存入MongoDB">
-                <i class="fa fa-chevron-left"></i> 关系型数据库(MySQL)数据存入MongoDB
+              <a href="/2017/03/20/post2/" rel="next" title="MongoDB导入shp并使用Geospatial Index">
+                <i class="fa fa-chevron-left"></i> MongoDB导入shp并使用Geospatial Index
               </a>
             
           </div>
@@ -407,10 +398,6 @@ mongoimport --db &amp;lt;db-name&amp;gt; --collection">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/25/post3/" rel="prev" title="使用Twitter API获取数据">
-                使用Twitter API获取数据 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -457,17 +444,8 @@ mongoimport --db &amp;lt;db-name&amp;gt; --collection">
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -520,22 +498,6 @@ mongoimport --db &amp;lt;db-name&amp;gt; --collection">
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB导入shp文件"><span class="nav-number">1.</span> <span class="nav-text">MongoDB导入shp文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Geospatial-Index"><span class="nav-number">2.</span> <span class="nav-text">Geospatial Index</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
