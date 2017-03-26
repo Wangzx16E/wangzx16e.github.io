@@ -247,6 +247,148 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://wangzx16e.github.io/2017/03/27/post3-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ellen Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/lrd5.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ellen's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/27/post3-1/" itemprop="url">
+                  MongoDB在Windows上安装和连接VS2012.
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-27T02:05:23+08:00">
+                2017-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>MongoDB在Windows上安装</strong>.</p>
+<p>注明：我根据网络博文安装运行成功，这是超简单版。其他快捷启动，查询等讲解请移步<a href="http://www.cnblogs.com/lecaf/archive/2013/08/23/mongodb.html" target="_blank" rel="external">Lecaf</a>。</p>
+<p>1.官网根据版本下载。     </p>
+<p>2.解压缩到自己想要安装的目录，比如d:\Mongodb</p>
+<p>3.创建文件夹d:\Mongodb\db 用来安装db</p>
+<p>4.运行cmd.exe进入dos命令界面，执行下列命令</p>
+<pre><code>&gt;cd d:\Mongodb\Server\bin   
+&gt;mongod -dbpath &quot;d:\Mongodb\db&quot;
+</code></pre><p>5.测试连接：新开一个cmd窗口，转目录到bin所在的文件夹</p>
+<pre><code>&gt;cd d:\Mongodb\Server\bin   
+&gt;mongo
+</code></pre><p>6.这样就可以运行了：）麻烦就在于每次运行都要<code>cd</code>再输入2次，可以装一个MongoDB Compass（GUI），或者移步<a href="http://www.cnblogs.com/lecaf/archive/2013/08/23/mongodb.html" target="_blank" rel="external">Lecaf</a>设置日志快捷登录。     </p>
+<p>7.关于MongoDB Compass，有最基本的分析同一个Field的数据分布成图功能，可以去<a href="https://www.mongodb.com/download-center?jmp=hero#compass" target="_blank" rel="external">官网</a>瞅一眼。</p>
+<p><strong><em>MongoDB连VS2012</em></strong> </p>
+<p>MongoDB官网上提供的NuGet安装方式，对版本要求太高，我的VS2012上安装不了NuGet2.12版本，于是所有的都无法安装。我用的是VS2012中工具菜单里<code>扩展和更新</code>，选择联机， 搜索<code>Mongo</code>找到的 <code>CData.ADO.NET.MongoDB provider</code> (<a href="http://cdn.cdata.com/help/DGB/ado/" target="_blank" rel="external">官网</a>)。</p>
+<p><em>关于NuGet</em>     </p>
+<p>需要说明的一点是，在NuGet的管理程序包中容易出现</p>
+<blockquote>
+<p>无法连接远程服务器。 </p>
+</blockquote>
+<p>我查了挺多资料，一是说需要自己设proxy，并且在config文件中手改一些数据。我试了几次没成；二是说问题是nuget.org在国内不易连上，我尝试用翻墙VPN，依旧显示无法连接。<br>最后，我去官网的package列表里手动下载的包，放在一个文件夹里，把文件夹目录手动添加到nuget程序包源里，就可以在VS里看到这些package了。(写文章的时候又去了Github查了一下，<a href="https://github.com/mongodb/mongo-csharp-driver" target="_blank" rel="external">mongo-csharp-driver</a>)</p>
+<p><em>注:</em> 可以直接下载的连接是在package页面的左侧<code>download(how to)</code>，所以只能下载官网里有的包版本。如果需要早期版本:( ,可以在GitHub上搜索看年份选取。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://wangzx16e.github.io/2017/03/25/post3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -701,7 +843,7 @@ ENCLOSED BY &apos;&quot;&apos; LINES  TERMINATED BY &apos;\n&apos;;
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
